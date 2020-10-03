@@ -4,6 +4,8 @@
 
 1. ?
 1. [入門第一步](https://www.youtube.com/watch?v=ZavL9y4Adrk)
+    - [MDN: 進入後點 [技術] 按鈕](https://developer.mozilla.org/zh-TW/)
+    - [W3Schools](https://www.w3schools.com/)
 1. [用什麼工具寫?](https://www.youtube.com/watch?v=0XhNnLOJO_0)
 1. [再談HTML](https://www.youtube.com/watch?v=88qmvi4snuo)
 1. [網頁裝潢師CSS](https://www.youtube.com/watch?v=PN6pV_ZLHqc)
