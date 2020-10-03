@@ -11,3 +11,5 @@
 1. [怎麼學CSS](https://www.youtube.com/watch?v=h7wJ2YZarFc)
 1. [區塊尺寸計算](https://www.youtube.com/watch?v=MV9_P6klL-Q)
 1. [Float浮動: 文繞圖、多欄版面](https://www.youtube.com/watch?v=-AO1IdBTY5c)
+    - [文繞圖](./web-design-head-first/09/float00.html)
+    - [多欄版面](./web-design-head-first/09/float01.html)
