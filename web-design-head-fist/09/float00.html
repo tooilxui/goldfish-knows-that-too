@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float-文繞圖</title>
+
+    <style>
+        .float-img {
+            /* 只能浮動靠左或靠右 */
+            float: left;
+            /* 
+                1. margin: 20px; -> up, down, left, rigt = 20px 
+                2. margin: 0px 20px; -> up, down = 0px; left, right = 20px
+                3. margin: 0px 20px 50px; ->  up = 0px; left, right = 20px; down = 50px
+                4  margin: 0px 20px 50px 40px up = px; right = 20px; down = 50px; left = 40px
+            */
+            margin: 0px 20px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="text-align:center;"><a
+            href="https://www.youtube.com/watch?v=-AO1IdBTY5c&list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre">tutorial
+            video</a>
+    </div> -->
+
+    <!-- 
+        #類似技術：float, flex, grid (?)
+    -->
+    <img src="https://fakeimg.pl/250x150/aaa,128/eee,255" class="float-img">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores ratione possimus ducimus, consectetur
+        in
+        similique est? Delectus, accusantium explicabo. Sed ratione explicabo labore, fugit dolor facere asperiores
+        aliquid
+        officia.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In corrupti quos perspiciatis nisi cupiditate
+        temporibus
+        ullam non, iusto quis assumenda minus nam modi quasi facere ad? Perspiciatis inventore exercitationem
+        voluptatum!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem velit illum dolorem quaerat impedit
+        reprehenderit soluta excepturi dolor aspernatur, quos rem, iste reiciendis saepe veniam magni. Veritatis,
+        architecto? Nam, deleniti.
+    </p>
+</body>
+
+</html>

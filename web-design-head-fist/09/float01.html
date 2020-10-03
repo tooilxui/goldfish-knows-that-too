@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float多欄版面</title>
+    <style>
+        * {
+            /* m0 + tab */
+            margin: 0;
+            /* p0 + tab */
+            padding: 0;
+        }
+
+        .container {
+            /* w960 + tab */
+            width: 960px;
+            /* bc + tab */
+            background-color: blanchedalmond;
+            /* 把剩下的寬度分成兩份，左右各一份，分配給設定auto的區域  */
+            margin: auto;
+            /* 
+                內邊距: 取消註解可以看一下container的範圍 
+            */
+            /* padding: 10px; */
+        }
+
+        .col {
+            width: 280px;
+            margin: 10px;
+            padding: 10px;
+            /* h200 + tab */
+            /* height: 200px; */
+            background-color: #ccc;
+            /* 
+                1. 原本container 是由3個col撐開高度 (本身沒有設定height)
+                2. 子物件設定成float後，父物件會抓不到子物件的高度
+                3. 可以搭配 clear 解決這個問題 (多設定一個div,並加上 clear:both 將container撐開)
+                4. 讓相關元素(col) 可以左右並排
+             */
+            float: left;
+        }
+
+        .col img {
+            width: 100%;
+        }
+
+        .clearfix {
+            /* 設定clear會該物件跑到所有的float物件後方，避免跟float物件重疊，自然就可以將container撐開 */
+            clear: both;
+            /* height: 10px; */
+            /* background-color: #f00; */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center;"><a
+            href="https://www.youtube.com/watch?v=-AO1IdBTY5c&list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre&t=11m39s">tutorial
+            video</a>
+    </div>
+
+    <!-- .container + tab -->
+    <!-- 除了叫container外 也常叫做 wrap -->
+    <div class="container">
+        <!-- col.*3 + tab -->
+        <div class="col">
+            <img src="https://fakeimg.pl/250x150/aaa,128/eee,255">
+            <div class="m">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis cupiditate vero dolore quos
+                    doloremque
+                    consequatur minus eveniet non, aspernatur ea aliquam quia, id molestias, voluptas doloribus magni
+                    excepturi hic est!
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="https://fakeimg.pl/250x150/aaa,128/eee,255">
+            <div class="m">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis cupiditate vero dolore quos
+                    doloremque
+                    consequatur minus eveniet non, aspernatur ea aliquam quia, id molestias, voluptas doloribus magni
+                    excepturi hic est!
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="https://fakeimg.pl/250x150/aaa,128/eee,255">
+            <div class="m">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis cupiditate vero dolore quos
+                    doloremque
+                    consequatur minus eveniet non, aspernatur ea aliquam quia, id molestias, voluptas doloribus magni
+                    excepturi hic est!
+                </p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+
+</html>
