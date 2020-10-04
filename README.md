@@ -21,3 +21,5 @@
 1. [換個新盒子](https://www.youtube.com/watch?v=O8EOgg-hhvI)
     - [box-sizing](./web-design-head-first/11/box.html)
     - [grid design](./web-design-head-first/11/grid-wrap.html)
+1. [CSS Reset](https://www.youtube.com/watch?v=WtjXBIyxhw8)
+    - [meyer reset.css](./web-design-head-first/12/reset.html)

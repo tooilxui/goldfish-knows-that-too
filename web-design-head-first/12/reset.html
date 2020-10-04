@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        參考文章：
+            1. [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
+            2. [CSS Reset 與 CSS normalize](https://ithelp.ithome.com.tw/articles/10196528)
+    
+        引用從meyerweb copy來的ccs reset樣式，就可以把所有的效果歸零。
+        缺點：太過強制，而且有可能有非預期的問題產生
+        優點：新手比較適用，之後可以再深入了解Normalize.css跟reset的差異。
+
+        [Normalize.css](https://necolas.github.io/normalize.css/)
+     -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- 
+        reset後可以重新自定義個元素的style
+     -->
+    <style>
+        h1 {
+            /* 1.2倍行高 */
+            line-height: 1.2;
+            font-size: 32px;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 15px;
+            /* 與下方元素的距離 */
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center;"><a href="https://www.youtube.com/watch?v=WtjXBIyxhw8">tutorial
+            video</a>
+    </div>
+
+    <a href=""></a>
+    <h1>title</h1>
+    <p><a href="#">Lorem</a> ipsum <strong>dolor</strong> sit amet consectetur adipisicing elit. Deserunt eum, impedit
+        similique voluptatibus facilis
+        quidem expedita omnis eaque voluptates temporibus consequuntur, obcaecati et sapiente iusto, sequi dolor dolore
+        aliquam ab?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum, impedit similique voluptatibus facilis
+        quidem expedita omnis eaque voluptates temporibus consequuntur, obcaecati et sapiente iusto, sequi dolor dolore
+        aliquam ab?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum, impedit similique voluptatibus facilis
+        quidem expedita omnis eaque voluptates temporibus consequuntur, obcaecati et sapiente iusto, sequi dolor dolore
+        aliquam ab?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum, impedit similique voluptatibus facilis
+        quidem expedita omnis eaque voluptates temporibus consequuntur, obcaecati et sapiente iusto, sequi dolor dolore
+        aliquam ab?</p>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+    </ul>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam eos accusamus! Earum dolorem
+            iusto quibusdam odit? Temporibus numquam a ea, veniam facilis itaque rerum corporis laboriosam, explicabo
+            quod aut.</li>
+    </ol>
+</body>
+
+</html>
