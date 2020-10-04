@@ -18,3 +18,6 @@
 1. [網頁兩大主角: inline, block (inline-block also)](https://www.youtube.com/watch?v=TtvQsVjt9t8)
     - [inline,block,inline-block](./web-design-head-first/10/inline-block.html)
     - [menu design](./web-design-head-first/10/menu.html)
+1. [換個新盒子](https://www.youtube.com/watch?v=O8EOgg-hhvI)
+    - [box-sizing](./web-design-head-first/11/box.html)
+    - [grid design](./web-design-head-first/11/grid-wrap.html)

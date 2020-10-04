@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 300px;
+            background-color: orange;
+            border: 10px solid red;
+            padding: 10px;
+
+            /* 
+                用來改變width的計算方式：
+                1. border-box: 將width設為border跟border之間的距離
+                2. content-box: 將width設為傳統計算方式 (width+border+padding)
+             */
+            box-sizing: border-box;
+            /* box-sizing: content-box; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro excepturi debitis velit ullam quam modi, enim
+        voluptatibus at reiciendis nesciunt, quas distinctio dolorem deserunt delectus perferendis architecto.
+        Cupiditate, id distinctio.</div>
+</body>
+
+</html>
