@@ -15,3 +15,6 @@
 1. [Float浮動: 文繞圖、多欄版面](https://www.youtube.com/watch?v=-AO1IdBTY5c)
     - [文繞圖](./web-design-head-first/09/float00.html)
     - [多欄版面](./web-design-head-first/09/float01.html)
+1. [網頁兩大主角: inline, block (inline-block also)](https://www.youtube.com/watch?v=TtvQsVjt9t8)
+    - [inline,block,inline-block](./web-design-head-first/10/inline-block.html)
+    - [menu design](./web-design-head-first/10/menu.html)

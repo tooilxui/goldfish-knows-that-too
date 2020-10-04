@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 用框線看範圍 */
+        /* h1,
+        p,
+        ul,
+        li,
+        div {
+            border: crimson;
+            border-style: solid;
+        }
+
+        a,
+        strong,
+        em,
+        span {
+            border: darkblue;
+            border-style: solid;
+        } */
+
+        div {
+            display: inline;
+        }
+
+        a {
+            background-color: gray;
+            /* Property is ignored due to the display. With 'display: inline', the width, height, margin-top, margin-bottom, and float properties have no effect.css(propertyIgnoredDueToDisplay) */
+            width: 500px;
+            /* 雖然inline可以用padding將左右撐開，但高度仍然不行 */
+            padding: 50px 30px;
+        }
+
+        em {
+            background-color: chartreuse;
+            /* 
+                inline-block 可以接受寬、高設定，且可以跟其他inline objects左右併排
+
+                口訣：只要有block就可以設定寬、高。只要有inline就可以左右併排。
+             */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- block object
+        特性: 不管多寬都會占掉一整列
+        例子: h1, p, ul, li, div 
+    -->
+
+    <!-- inline object
+         特性: 跟大家(other inline objects)左右併排在一起
+         例子: a, strong, em, span
+    -->
+    <h1>title</h1>
+
+    <p>Lorem ipsum dolor sit amet <a href="#">consectetur</a>, adipisicing elit. Esse ex amet architecto, unde tempora
+        ad neque eum
+        <strong>aliquam</strong> <em>reiciendis</em> animi. <span>Dolorem</span>, molestias reprehenderit. Amet quo
+        asperiores qui,
+        aliquid
+        itaque molestias!
+    </p>
+
+    <ul>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <!-- 
+        在網頁中可以看到test跟div不同行,所以是block
+        但使用 display: inline 後就跟test排 在一起了
+    -->
+    <div>Lorem ipsum dolor sit amet consectetur adipi </div>test
+</body>
+
+</html>

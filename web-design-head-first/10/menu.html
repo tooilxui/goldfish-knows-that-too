@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu design by using inline-block</title>
+</head>
+
+<style>
+    .menu {
+        background: #fa0;
+        text-align: center;
+
+        /* 
+            會發現每個a之間都有個小空格，是因為每個a之間的換行都有個空白字元。 (可以將a都寫在同一行就不會有空格)
+            
+            或者用css設定：
+            因為a包在menu裡面，將font-size設為0，a之間的空白字元就不佔空間了，
+            但要記得將a的font-size設回來，不然字就跟著消失了，因為父層的menu設成0，子層的a也會繼承0。
+        */
+        font-size: 0;
+    }
+
+    .menu a {
+        color: #fff;
+        text-decoration: none;
+
+        /* padding + inline-block 將 menu撐開 */
+        padding: 10px 20px;
+        display: inline-block;
+
+        /* debug: 看區塊範圍 */
+        background-color: red;
+
+        font-size: 16px;
+    }
+
+    .menu a:hover {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="menu">
+        <a href="#">Link</a>
+        <a href="#">Link</a><a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+</body>
+
+</html>
