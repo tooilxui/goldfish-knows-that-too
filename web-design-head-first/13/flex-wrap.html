@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .wrap {
+            width: 960px;
+            margin: auto;
+            background: #ccc;
+
+            /* 
+                設定當元素超出容器時該怎麼顯示:
+                1. nowrap: 自動調整item寬度，不換行。
+                1. wrap: item的寬度會維持在360px，若空間不夠則換行。
+                2. wrap-reverse: 同上，排列順序，擺放的規則為： 由下至上，從左至右。
+
+                [CSS Flexbox 新手入門教學 — 基礎語法&觀念](https://medium.com/@a0988891318/css-flexbox-%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80%E6%95%99%E5%AD%B8-5ad3502e4f40)
+             */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            /* 只是個初始寬，設定大一點可避免項目太少變太窄 */
+            width: 360px;
+            margin: 0px 10px 10px;
+            background-color: #ffa;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center;"><a href="https://www.youtube.com/watch?v=SnsAxb4-gHA">tutorial
+            video</a>
+        <div class="wrap">
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis explicabo
+                laudantium consequatur eaque aliquam! Obcaecati quidem, enim hic incidunt voluptas mollitia blanditiis
+                fugit error nam eius atque. Labore, saepe.</div>
+        </div>
+</body>
+
+</html>
