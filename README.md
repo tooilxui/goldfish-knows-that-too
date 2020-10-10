@@ -31,3 +31,6 @@
     - [nav](./web-design-head-first/14/nav.html)
 1. [Relative 定位](https://www.youtube.com/watch?v=Rukgrh1HlZg)
     - [relative](./web-design-head-first/15/relative.html)
+1. [Absolute 定位](https://www.youtube.com/watch?v=JOdZdHnuGmM)
+    - [absolute](./web-design-head-first/16/absolute.html)
+    - [example](./web-design-head-first/16/example.html)
