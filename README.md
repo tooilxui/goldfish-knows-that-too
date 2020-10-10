@@ -34,3 +34,5 @@
 1. [Absolute 定位](https://www.youtube.com/watch?v=JOdZdHnuGmM)
     - [absolute](./web-design-head-first/16/absolute.html)
     - [example](./web-design-head-first/16/example.html)
+1. [Transition 網頁動畫](https://www.youtube.com/watch?v=kR6JpIGJDBQ)
+    - [transition](./web-design-head-first/18/transition.html))
