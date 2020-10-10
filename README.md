@@ -41,3 +41,5 @@
 1. [媒體查詢](https://www.youtube.com/watch?v=czkmXTkjCDM)
     - [media two screen size](./web-design-head-first/20/media.html)
     - [media three screen size](./web-design-head-first/20/media-1.html)
+1. [RWD入門](https://www.youtube.com/watch?v=0FayRAu1du0)
+    - [flex by screen size](./web-design-head-first/21/rwd.html)
