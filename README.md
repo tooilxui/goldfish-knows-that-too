@@ -26,3 +26,6 @@
 1. [排版的聖品 Flex](https://www.youtube.com/watch?v=SnsAxb4-gHA)
     - [flex with wrap](./web-design-head-first/13/flex-wrap.html)
     - [grid design](./web-design-head-first/13/example.html)
+1. [Fixed 定位](https://www.youtube.com/watch?v=6jwl-XEpXLk)
+    - [fixed](./web-design-head-first/14/fixed.html)
+    - [nav](./web-design-head-first/14/nav.html)    
