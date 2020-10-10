@@ -36,3 +36,5 @@
     - [example](./web-design-head-first/16/example.html)
 1. [Transition 網頁動畫](https://www.youtube.com/watch?v=kR6JpIGJDBQ)
     - [transition](./web-design-head-first/18/transition.html))
+1. [Animation 網頁動畫](https://www.youtube.com/watch?v=H9xZ9mExrZk)
+    - [animation](./web-design-head-first/19/animation.html)
