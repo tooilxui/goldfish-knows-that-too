@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .amos{
+            width: 100%;
+            height: 300px;
+            display: none;
+        }
+        .amos1{
+            background-color: #faa;
+        }
+        .amos2{
+            background-color: #aaf;
+        }
+        
+        /* @media screen and (條件1) and (條件2) {} */
+        /* 768px 以上套用效果 */
+        @media screen and (min-width: 768px) {
+            .amos{
+               background-color: #f00;
+               display: block;
+            }
+        }
+        /* 1200px 以上套用效果 */
+        @media screen and (min-width: 1200px) {
+            .amos{
+               background-color: #00f;
+            }
+        }
+        /* 
+            [what's css media](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+            [字級效果模擬](http://csscoke.com/webq)
+        */
+    </style>
+</head>
+<body>
+    <div class="amos amos1">amos1</div>
+    <div class="amos amos2">amos2</div>
+</body>
+</html>

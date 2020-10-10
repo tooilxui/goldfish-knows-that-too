@@ -38,3 +38,6 @@
     - [transition](./web-design-head-first/18/transition.html))
 1. [Animation 網頁動畫](https://www.youtube.com/watch?v=H9xZ9mExrZk)
     - [animation](./web-design-head-first/19/animation.html)
+1. [媒體查詢](https://www.youtube.com/watch?v=czkmXTkjCDM)
+    - [media two screen size](./web-design-head-first/20/media.html)
+    - [media three screen size](./web-design-head-first/20/media-1.html)
