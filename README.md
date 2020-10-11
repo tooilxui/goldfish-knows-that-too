@@ -47,3 +47,6 @@
     - [common RWD layout](./web-design-head-first/21/rwd.html)
 1. [RWD試排版](https://www.youtube.com/watch?v=tEavVrEPBlA)
     - [flex by screen size](./web-design-head-first/22/rwd.html)
+1. [RWD選單製作](https://www.youtube.com/watch?v=E9SosNZkX7Y)
+    - [RWD menu](./web-design-head-first/23/menu.html)
+    - [RWD menu + flex by screen size](./web-design-head-first/23/22-rwd-menu.html)

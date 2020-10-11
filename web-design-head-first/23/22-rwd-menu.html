@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* 讓banner跟logo之間的空白行消失 （不對齊base line) */
+        img{
+            vertical-align: bottom;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .item-group {
+            width: 100%;
+            min-width: 1400px;
+            margin: auto;
+        }
+
+        .banner img{
+            width: 100%;
+        }
+
+        .title {
+            margin: 0 0 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }
+
+        .title h2 {
+            font-size: 46px;
+            text-align: center;
+        }
+
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .item {
+            margin: 0 10px 40px;
+            width: 100%;
+        }
+        /* 上方item有設定共用的margin，父層如果沒有設定邊框線，且該父層的 margin-top 小於子層的 margin-top 時，該父層的 margin-top 會直接採用子層的 margin-top*/
+        /* 手動將 .item margin設為0讓父層不受子層影響 */
+        .service .item {
+            margin: 0;
+        }
+
+        /* .item h3{ */
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .item .pic img {
+            width: 100%;
+        }
+        .service{
+            margin: 60px 0;
+            background-color: #ffa;            
+        }
+
+        @media screen and (min-width: 768px) {
+            .item-group {
+                display: flex;
+            }
+
+            .service .item {
+                display: flex;
+            }
+
+            .service .item .pic,
+            .service .item .text {
+                width: 50%;
+                margin: 0;
+            }
+
+            .service .item .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+        }
+
+        /* RWD一般先做手機的效果，這樣手機才不用先讀桌機的CSS，再讀到手機的CSS，手機續航較差。 */
+        #menu_control{
+            /* 讓menu隱藏 TODO: why? (17m:02s) */
+            position: absolute;
+            /* 設定較大的z-index可以顯示出來 */
+            /* z-index: 2; */
+
+            /* 加保險，怕有些瀏覽器發神經，會顯示出來。 */
+            opacity: 0;
+        }
+        .header {
+            height: 50px;
+            background-color: #ccc;
+
+            position: relative;
+        }
+        .logo{
+            width: 60px;
+            height: 40px;
+        }
+        .logo a {
+            display: block;
+            height: 40px;
+        }
+        .logo img{
+            display: block;
+            /* vertical-align: middle; */
+        }
+        /* 長漢堡的底色 */
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #aaa;
+            /* label 是 inline，要設定成block，設寬高才有用。 */
+            display: block;
+
+            /* header 設定 relative 確保menu_btn的absolute不會跑出header範圍 */
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .menu_btn span{
+            /* 讓選單兩個字消失 */
+            /* opacity: 0; */
+
+            /* 另一種兩選單兩字消失的作法 */
+            width: 1px;
+            height: 1px;
+            display: block;
+            /* 超出block範圍的部份被藏起來 */
+            overflow: hidden;
+        }
+        /* 長漢堡一根一根的部份 */
+        .menu_btn::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            /* 漢堡寬度40px，左右各留2px，絕對定位從2px開始 */
+            left: 2px;
+            width: 36px;
+
+            /* 置中 */
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            /* 利用陰影長出上下兩根 */
+            box-shadow: 0px 8px 0px #000,
+                        0px -8px 0px #000;
+
+            background-color: #000;
+        }
+        nav{
+            width: 80%;
+            /* 
+                viewport 100% -> 螢幕可視範圍高度的百分比 100%
+                但直接設定100vh會超過，因為上面還有logo跟label的高度，label不需要顯示可以用postion將其隱藏，
+                此處的height在透過calc扣除logo高
+            */
+            height: calc(100vh - 40px);
+            background-color: #282923;
+            /* 讓nav不要粘著logo */
+            position: absolute;
+            top: 50px;
+            /* 讓nav先藏在畫面外，等check box被勾選再進來。*/
+            left: -100%;
+            /* 加點延遲效果 */
+            transition: .5s;
+        }
+        nav a{
+            /* 讓超連結直排 */
+            display: block;
+            text-decoration: none;
+            color: #a6e22c;
+            padding: 10px 20px;
+            /* 加底線 */
+            border-bottom: 1px solid #a6e22c;
+        }
+        /* 當menu_control被勾選時（checked)，選擇到後面的 header裡的 nav 將其left從-100％改為0，顯示在畫面上。 */
+        #menu_control:checked ~ .header nav{
+            left: 0px
+        }
+
+        /* 開始電腦畫面控制 */
+        /* 基本就是去除一些手機板的設定，再加上電腦版的設定。 */
+        @media screen and (min-width: 768px){
+            /* 把漢堡藏起來 */
+            .menu_btn{
+                display: none;
+            }
+            .header{
+                display: flex;
+                /* 讓header裡面的東西分散對齊 */
+                justify-content: space-between; 
+                background-color: #282923;
+                /* 垂直置中，避免元素靠上 */
+                align-items: center;
+            }
+            nav{
+                /* 從absolute改回來 */
+                position: relative;
+                /* 從隱藏改回來 */
+                left: 0;
+                /* 改橫排 */
+                display:flex;
+                /* 寬跟高的設定也都改回預設 */
+                width: auto;
+                height: auto;
+                /* 往上縮 */
+                top: 0;
+                /* 去除背景 */
+                background-color: transparent;
+            }
+            nav a{
+                /* 去除底線 */
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- input:c#menu_control -->
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40?random=1"></a>
+        </h1>
+        
+        <!-- 跟input連動，點選單check box就會跟著句選或不句選 -->
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+
+        <nav>
+            <!-- a[href=#]{link}*6 -->
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+
+
+    <div class="banner">
+        <img src="https://picsum.photos/1400/500?random=1">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>about us</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur blanditiis quod nam expedita,
+                    perspiciatis ullam incidunt temporibus fuga beatae adipisci?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>about us</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur blanditiis quod nam expedita,
+                    perspiciatis ullam incidunt temporibus fuga beatae adipisci?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>明天地上看了推出本頁特價暴力網頁班，給予房間歷史是個仔細免費版律師，青年微軟，承認本站我還完美，並且需要突然部隊尋找哥。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copy-right 2020 by saxon
+    </div>
+</body>
+
+</html>
