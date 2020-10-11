@@ -44,4 +44,6 @@
     - [media two screen size](./web-design-head-first/20/media.html)
     - [media three screen size](./web-design-head-first/20/media-1.html)
 1. [RWD入門](https://www.youtube.com/watch?v=0FayRAu1du0)
-    - [flex by screen size](./web-design-head-first/21/rwd.html)
+    - [common RWD layout](./web-design-head-first/21/rwd.html)
+1. [RWD試排版](https://www.youtube.com/watch?v=tEavVrEPBlA)
+    - [flex by screen size](./web-design-head-first/22/rwd.html)
