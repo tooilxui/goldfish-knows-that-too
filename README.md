@@ -34,6 +34,8 @@
 1. [Absolute 定位](https://www.youtube.com/watch?v=JOdZdHnuGmM)
     - [absolute](./web-design-head-first/16/absolute.html)
     - [example](./web-design-head-first/16/example.html)
+1. [排個稀飯版](https://www.youtube.com/watch?v=bxnZArACzuU)
+    - [common layout](./web-design-head-first/17/rice.html)
 1. [Transition 網頁動畫](https://www.youtube.com/watch?v=kR6JpIGJDBQ)
     - [transition](./web-design-head-first/18/transition.html))
 1. [Animation 網頁動畫](https://www.youtube.com/watch?v=H9xZ9mExrZk)

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../12/reset.css">
+<style>
+    .header{
+        display: flex;
+        padding: 0px 10px;
+        background-color: #000;
+    }
+    /* 避免logo跟header的邊界黏在一起，目前還是怪怪的，後面會在調整？ */
+    .header .logo{
+        display: inline-block;
+        padding: 6px;
+    }
+    .header .logo img{
+        vertical-align: middle;
+    }
+    /* nav寬度是100%，因為父層header是flex，所以預設子層是不換列的，也就表示logo跟nav都會被強迫待在同一列，這時候因為兩個物件的寬度加起來超過父層寬度了，所以 flex-item 的 flex-shrink 屬性會產生作用，讓 logo 跟 nav 都自動縮減寬度至符合父層的寬度。
+雖然 flex-item 屬性是屬於 block 的特性，但是我們還是要看一下他跟其他屬性之間的搭配。 */
+    .header nav{
+        /* nav的寬度不是跟父層等寬而是跟他的內容一樣寬，因此設定 text-align: right 的時候，縱使有效也看不出來，需要加大width才能看出效果 */
+        text-align: right;
+        width: 100%;
+
+        font-size: 0;
+    }
+    .header a{
+        /* 設成inline-block才能設定padding */
+        display: inline-block;
+        /* 使用line-high取代高度的設定: logo圖高度40px + padding 6*2 = 52px */
+        line-height: 52px;
+
+        /* 為了避免inline-block之間的空白，先將nav font-size設為0，再從a設回來*/
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+
+        /* 讓每個a左右保留間隙，才不會黏在一起 */
+        padding: 0 10px;
+    }
+    .header nav a:hover {
+        background-color: #fa0;
+        transition: .5s;
+    }
+    
+    .banner img{
+        /* 讓banner圖片寬度佔滿整個頁面 */
+        width: 100%;
+    }
+
+    .path{
+        /* 並排顯示 */
+        display: flex;
+    }
+    .path li{
+        /* 讓每個li上下左右保留間隙，才不會黏在一起 */
+        padding: 6px 8px;
+
+        position: relative;
+    }
+    .path li a{
+        color: #aaa;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    /* 偽類，在li+li之前加上content */
+    .path li + li::before {
+        content: '/';
+        color: #aaa;
+
+        /* 定位於第一個父層中有設定position的位子 （找到li有relative)，靠在li左側0px處 */
+        position: absolute;
+        left: 0px;
+    }
+
+    .item h3{
+        font-size: 36px;
+        padding: 0 0 30px;
+    }
+    .wrap{
+        /* 固定最大寬度 */
+        width: 960px;
+        /* 超過最大寬度的空白補在左右兩側 */
+        margin: auto;
+    }
+    .about{
+        /* 讓about 跟 produts之間有點距離 */
+        padding: 40px 0;
+    }
+    /* 讓wrap並排顯示 */
+    .about .wrap{
+        display: flex;        
+    }
+    .about .item{
+        /* 也可以稍微設定超過(400px)讓flex自動計算 */
+        width: 3000px;
+        margin: 0 10px;
+        /* 文字至中 */
+        text-align: center;
+    }
+    .about .item img{
+        border-radius: 50%;
+    }
+    /* .about .h2{ */
+    /* 用 > 代表只套用到about下第一層的h2 */
+    .about > .h2{
+        /* 限制h2的最大寬度跟wrap一樣，超過最大寬度的空白補在左右兩側 */
+        /* 因為父層wrap設定display flex，若不設定寬度沒辦法撐開並置中。 */
+        /* 或者可以直接把包住h2的wrap從html中拿掉，就不需要設定width了（因為沒有flex）。 */
+        width: 960px;
+        margin: auto;
+
+        text-align: center;
+
+        font-size: 42px;
+        padding: 20px 0;
+    }
+    .about > p {
+        /* 限制p的最大寬度，超過最大寬度的空白補在左右兩側 */        
+        width: 660px;
+        margin: auto;
+        /* 跟後面的 wrap保持點距離 */
+        padding: 40px 0 60px;
+
+        text-align: center;
+    }
+
+    .products{
+        background-color: #ccc;
+    }
+    .products .wrap{
+        display: flex;
+    }
+    .products .item{
+        /* 只有左右兩個item所以直接對分寬度 */
+        width: 50%;
+    }
+    .products img{
+        /* 讓左側圖片直接寬度塞滿50％ */
+        width: 100%;
+    }
+    .products .text{
+        /* 讓文字跟區塊保持距離，並置中 */
+        padding: 0 20px;
+        text-align: center;
+
+        /* [ref](https://wcc723.github.io/css/2017/07/21/css-flex/) */
+        /* 讓產品描述置中 */
+        display: flex;
+        flex-direction: column;
+        /* text-align:center 針對文字設定對齊，justify-content: center 針對整個子標籤，兩者作用的對象不同，如果你的子項目是多個的話，就能區分出兩者差異了。 */
+        justify-content: center;
+    }
+
+    .service{
+        padding: 40px 0;
+        background-color: #ffa;
+    }
+    .service >h2{
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        font-size: 42px;
+        padding: 20px 0;
+    }
+    .service >p{
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .service .wrap{
+        display: flex;
+    }
+    .service .item{
+        margin: 0 10px;
+        width: 300px;
+        text-align: center;
+    }
+    .service .item h3{
+
+    }
+    .service .item img{
+        width: 100%;
+    }
+    .service .item p{
+
+    }
+
+    .footer {
+        text-align: center;
+        background-color: #000;
+        color: #888;
+        padding: 20px 0;
+    }
+</style>
+<body>
+    <div class="header">
+        <!-- logo 通常都會加上alt 來標明是什麼網站，並加上超連結來回到首頁 -->
+        <!-- 最後用header包起來 （準備做成滿板版面） -->
+        <a href="#" class="logo"><img src="https://picsum.photos/200/40?random=1" alt="網站名稱"></a>
+        <nav>
+            <a href="#">關於我們</a>
+            <a href="#">產品</a>
+            <a href="#">服務</a>
+            <a href="#">聯絡我們</a>
+            <a href="#">網站地圖</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="https://picsum.photos/1200/300?random=2">
+    </div>
+
+    <!-- Breadcrumbs -->
+    <ul class="path">
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">首頁</a></li>
+    </ul>
+
+    <div class="about">
+        <!-- <div class="wrap"> -->
+            <div class="h2">關於我們</div>
+        <!-- </div> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aut numquam impedit illo quas officiis ad id sint voluptatibus dignissimos rem deserunt, minima vel accusantium, praesentium possimus assumenda at ipsam.</p>
+        <div class="wrap">
+            <div class="item">
+                <img src="https://picsum.photos/50/50?random=5">
+                <h3>title</h3>
+                <p>良好無聊義務只見內容螢幕有什麼，位於都說完全制度，轉移看見專業名稱互相說了循環登陸懂得公開不喜歡會有字元習慣，每日不用訂單多年生意房東，經過從事執行時間，你的生氣請問能力到我還沒點此通過那天建築是的關注，版面聯合男生，我們嚴重特價怎麼辦左右，權力每月，工。</p>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/50/50?random=5">
+                <h3>title</h3>
+                <p>對方權威昨天同步文字漸漸軍事便是學校，現場軍事地說話題禮品。</p>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/50/50?random=5">
+                <h3>title</h3>
+                <p>對方權威昨天同步文字漸漸軍事便是學校，現場軍事地說話題禮品。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="wrap">
+            <!-- 
+                設為兩個class name可以做特定控置
+                1. 共同的特性寫在相同的class name上 （item）
+                2. 不同的特性寫在不同的class name上 （pic, text）
+            -->
+            <div class="item pic">
+                <img src="https://picsum.photos/300/200?random=1">
+            </div>
+            <div class="item text">
+                <h3>title</h3>
+                <p>添加鎖定商城輸入區域啟動熱線結合患者含有空間殺手設立夥伴，都有殺手文學反映就像民間風景合同東西，可能申請魯蛇那時確保士兵激情軍隊一套採取使用他的現象採購，屏幕公主理由很快怎樣引擎我和官方蔬菜論壇來自高校國際回憶，至今緩緩，網站素質尷尬直接日前這時歡迎西方。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>服務項目</h2>
+        <p>Lorem ipsum dolor sit amet .</p>
+        <div class="wrap">
+            <item>
+                <img src="https://picsum.photos/300/200?random=1">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odio accusamus, itaque quos quaerat illum consectetur nobis non sequi dolor est doloribus incidunt? Hic beatae cum fugiat minus molestias voluptas.</p>
+            </item>
+            <item>
+                <img src="https://picsum.photos/300/200?random=1">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odio accusamus, itaque quos quaerat illum consectetur nobis non sequi dolor est doloribus incidunt? Hic beatae cum fugiat minus molestias voluptas.</p>
+            </item>
+            <item>
+                <img src="https://picsum.photos/300/200?random=1">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odio accusamus, itaque quos quaerat illum consectetur nobis non sequi dolor est doloribus incidunt? Hic beatae cum fugiat minus molestias voluptas.</p>
+            </item>
+            <item>
+                <img src="https://picsum.photos/300/200?random=1">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odio accusamus, itaque quos quaerat illum consectetur nobis non sequi dolor est doloribus incidunt? Hic beatae cum fugiat minus molestias voluptas.</p>
+            </item>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copy right 2020 by saxon
+    </div>
+</body>
+</html>
