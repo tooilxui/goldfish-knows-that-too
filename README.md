@@ -53,3 +53,5 @@
 1. [Bootstrap](https://www.youtube.com/watch?v=cxCD6Ntjl94)
     - [RWD basic](./web-design-head-first/24/bootstrap-rwd.html)
     - [grid design](./web-design-head-first/24/bootstrap-grid.html)
+1. [Bootstrap-components](https://www.youtube.com/watch?v=p3CK74T9GHQ)
+    - [components](./web-design-head-first/25/bootstrap-com.html)
