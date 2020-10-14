@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        .aa{
+            background-color: #faa;
+        }
+        .bb{
+            background-color: #aaf;
+        }
+        .cc{
+            background-color: #afa;
+        }
+        .item .img-fluid {
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <!-- .col-12.col-md-4*3 -->
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <!-- 
+                        此處套用 img-fluid想讓圖片滿板，但發現失敗，用開發人員工具可以看到img套用的CSS樣式是max-width 100%
+                        max-with的特性是以自己本身為最大寬度，比如圖片最大寬度1000，放到寬度100的item裡，圖片寬度會變成100。
+                        而with則是父層有多寬就佔多寬，較接近我們的需求，所以在上面的css針對 .img-fluid 覆蓋bootstrp原始設定。
+                    -->
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=1" class="img-fluid">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, impedit aliquid debitis dolorem id laborum, quam distinctio eum, ex tempore perferendis repellat aut at laudantium. Nesciunt rem ratione obcaecati doloremque?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
