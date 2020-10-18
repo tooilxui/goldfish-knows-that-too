@@ -62,3 +62,6 @@
     - [AD](./web-design-head-first/27/ad.html)
 1. [JQuery](https://www.youtube.com/watch?v=YEu5qmoOy6s)
     - [CSS control](./web-design-head-first/28/css-control.html)
+1. [JQuery](https://www.youtube.com/watch?v=LoiC46NMOrw)
+    - [fade toggle](./web-design-head-first/29/animation.html)
+    - [fade out](./web-design-head-first/29/animation.html)
