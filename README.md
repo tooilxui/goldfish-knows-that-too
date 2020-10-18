@@ -55,3 +55,5 @@
     - [grid design](./web-design-head-first/24/bootstrap-grid.html)
 1. [Bootstrap-components](https://www.youtube.com/watch?v=p3CK74T9GHQ)
     - [components](./web-design-head-first/25/bootstrap-com.html)
+1. [JQuery](https://www.youtube.com/watch?v=AnmFcj_sEHQ)
+    - [introduction](./web-design-head-first/26/jquery.html)

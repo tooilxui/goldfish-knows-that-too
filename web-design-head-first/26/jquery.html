@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        https://jquery.com/
+        script 寫在後面效率比較好，DOM載入完成才能處理javascript, CSS
+    -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+        // 要用JavaScript操縱網頁的DOM元素時，必須等網頁完全載入後才可安全地進行操作，而要確保網頁載入，可使用jQuery的$(document).ready()。
+        // 把Javascript程式碼寫在$(document).ready()中即可。
+        // [what's the HTML DOM?](https://www.w3schools.com/whatis/whatis_htmldom.asp)
+        $(document).ready(function () {
+            // anything you want to do here
+        });
+    </script>
+
+</body>
+
+</html>
