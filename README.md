@@ -60,3 +60,5 @@
 1. [JQuery](https://www.youtube.com/watch?v=CDO8AkK2HnE)
     - [event](./web-design-head-first/27/jquery-event.html)
     - [AD](./web-design-head-first/27/ad.html)
+1. [JQuery](https://www.youtube.com/watch?v=YEu5qmoOy6s)
+    - [CSS control](./web-design-head-first/28/css-control.html)
