@@ -57,3 +57,6 @@
     - [components](./web-design-head-first/25/bootstrap-com.html)
 1. [JQuery](https://www.youtube.com/watch?v=AnmFcj_sEHQ)
     - [introduction](./web-design-head-first/26/jquery.html)
+1. [JQuery](https://www.youtube.com/watch?v=CDO8AkK2HnE)
+    - [event](./web-design-head-first/27/jquery-event.html)
+    - [AD](./web-design-head-first/27/ad.html)
