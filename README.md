@@ -77,3 +77,6 @@
     - [對齊](./bootstrap/04/align.html)
 1. [格線排序控制](https://www.youtube.com/watch?v=rdN4e1BZfGM)
     - [排序](./bootstrap/05/05.html)
+1. [格線距離控制](https://www.youtube.com/watch?v=r6bgHaOAroQ)
+    - [offset概念](./bootstrap/06/06.html)
+    - [交錯式設計](./bootstrap/06/06-1.html)
