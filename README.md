@@ -72,3 +72,6 @@
 1. [安裝與檢測方式]
 1. [格線系統](https://www.youtube.com/watch?v=OfaswRwuWY0)
     - [col,row,container](./bootstrap/03/03.html) (TODO: 不知道為什麼g-0沒生效)
+1. [格線的對齊與分佈](https://www.youtube.com/watch?v=uJ_LdnvM-D4)
+    - [分佈](./bootstrap/04/justify-content.html)
+    - [對齊](./bootstrap/04/align.html)
