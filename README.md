@@ -80,3 +80,7 @@
 1. [格線距離控制](https://www.youtube.com/watch?v=r6bgHaOAroQ)
     - [offset概念](./bootstrap/06/06.html)
     - [交錯式設計](./bootstrap/06/06-1.html)
+1. [圖片與寬高尺寸控制](https://www.youtube.com/watch?v=_SSPsPmz9U0)
+    - [figures](./bootstrap/07/figures.html)
+    - [img sizing](./bootstrap/07/img.html)
+    - [Grid with img sizing](./bootstrap/07/sizing.html)
