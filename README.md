@@ -84,3 +84,6 @@
     - [figures](./bootstrap/07/figures.html)
     - [img sizing](./bootstrap/07/img.html)
     - [Grid with img sizing](./bootstrap/07/sizing.html)
+1. [共用項目margin與padding](https://www.youtube.com/watch?v=9XKcL8uYFOE)
+    - [margin](./bootstrap/08/margin.html)
+    - [交錯式設計](./bootstrap/08/08.html)
