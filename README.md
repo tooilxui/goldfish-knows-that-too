@@ -99,3 +99,5 @@
     - [navbar](./bootstrap/12/navbar.html)
 1. [麵包屑與路徑列](https://www.youtube.com/watch?v=4-InRNphJxs)
     - [breadcrumb](./bootstrap/13/breadcrumb.html)
+1. [分頁導覽輕鬆做](https://www.youtube.com/watch?v=87kDxo4y_Sw)
+    - [pagination](./bootstrap/14/pagination.html)
