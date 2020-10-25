@@ -124,3 +124,5 @@
     - [button](./bootstrap/24/button.html)
 1. [表單組件入門](https://www.youtube.com/watch?v=rfz8ruZjiY4)
     - [form](./bootstrap/24/form.html)
+1. [選取組件與檔案組件](https://www.youtube.com/watch?v=Qhem6KBaAL8)
+    - [select, file input](./bootstrap/25/select.html)
