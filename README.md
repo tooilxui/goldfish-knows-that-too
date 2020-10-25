@@ -107,3 +107,6 @@
     - [flex](./bootstrap/16/flex.html)
 1. [幻燈片製作無困難](https://www.youtube.com/watch?v=l-x3o38zYEQ)
     - [carousel](./bootstrap/carousel.html)
+1. [Modal光箱效果太Easy](https://www.youtube.com/watch?v=7AjDi3ldejQ)
+    - [modal v4.5.3](./bootstrap/modal-4.html)
+    - [modal v5.0.0 alpha2](./bootstrap/modal-4.html)
