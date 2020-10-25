@@ -130,3 +130,5 @@
     - [input gorup](./bootstrap/27/input-group.html)
 1. [Checkbox 與 Radio 組件](youtube.com/watch?v=fbLB-XL8Iw8)
     - [checkbox, radio](./bootstrap/28/checkbox-radio.html)
+1. [神速改出專屬你的 Bootstrap](https://www.youtube.com/watch?v=6Q6ylYaJfXM)
+    - [personalize bootstrap](./bootstrap/29/29.html)
