@@ -110,3 +110,5 @@
 1. [Modal光箱效果太Easy](https://www.youtube.com/watch?v=7AjDi3ldejQ)
     - [modal v4.5.3](./bootstrap/modal-4.html)
     - [modal v5.0.0 alpha2](./bootstrap/modal-4.html)
+1. [Tooltip與Popover提示訊息](https://www.youtube.com/watch?v=h8AJGequLkE)
+    - [tooltips/popover](./bootstrap/tooltips.html)
