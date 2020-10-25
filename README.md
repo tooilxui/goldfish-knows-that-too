@@ -126,3 +126,5 @@
     - [form](./bootstrap/24/form.html)
 1. [選取組件與檔案組件](https://www.youtube.com/watch?v=Qhem6KBaAL8)
     - [select, file input](./bootstrap/25/select.html)
+1. [輸入群組組件](https://www.youtube.com/watch?v=fbLB-XL8Iw8)
+    - [input gorup](./bootstrap/26/input-group.html)
