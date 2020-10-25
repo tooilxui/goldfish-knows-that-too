@@ -101,3 +101,5 @@
     - [breadcrumb](./bootstrap/13/breadcrumb.html)
 1. [分頁導覽輕鬆做](https://www.youtube.com/watch?v=87kDxo4y_Sw)
     - [pagination](./bootstrap/14/pagination.html)
+1. [Display之顯示、隱藏屬性控制](https://www.youtube.com/watch?v=9s6q3_m9_LI)
+    - [display control by class name](.bootstrap/15/15.html)
