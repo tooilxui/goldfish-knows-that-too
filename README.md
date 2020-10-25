@@ -105,3 +105,5 @@
     - [display control by class name](.bootstrap/15/15.html)
 1. [Flex控制太簡單](https://www.youtube.com/watch?v=X0Lpt_yX3wY)
     - [flex](./bootstrap/16/flex.html)
+1. [幻燈片製作無困難](https://www.youtube.com/watch?v=l-x3o38zYEQ)
+    - [carousel](./bootstrap/carousel.html)
