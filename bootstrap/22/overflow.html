@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .overflow-auto, .overflow-hidden{
+            width: 200px;
+            height: 200px;
+        }
+        .pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .pic2{
+            width: 100px;
+            height: 100px;
+        }
+        .pic2 img{
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- 用來將超過容器的部份隱藏或出現捲軸 -->
+    <div class="overflow-auto bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fuga, aliquam maxime nobis molestiae eos explicabo, officia totam cupiditate doloremque accusamus animi odio vel. Laborum ex quasi reiciendis ab excepturi?</div>
+    <div class="overflow-hidden bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odio illum perferendis dolores quos cum quibusdam nulla, cumque suscipit perspiciatis obcaecati et magni placeat reiciendis? Quia fuga harum libero maxime.</div>
+
+    <!-- 儘管上面的radius已經做了圓角，但圖片還是會超過，透過overflow-hidden，將超過的地方藏起來。 -->
+    <div class="pic overflow-hidden">
+        <img src="https://picsum.photos/300/300?random=1" class="w-100">
+    </div>
+
+    <!-- w-100 h-100 讓長方形的圖片變形了，可在上方CSS加上object-fit:cover讓圖片超過的部份裁掉（維持原比例）。 -->
+    <div class="pic2">
+        <img src="https://picsum.photos/1300/300?random=1" class="w-100 h-100">
+    </div>
+    <!-- 沒裁切的圖片 -->
+    <div class="pic3">
+        <img src="https://picsum.photos/1300/300?random=1" class="w-100 h-100">
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
