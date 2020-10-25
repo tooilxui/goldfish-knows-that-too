@@ -112,3 +112,5 @@
     - [modal v5.0.0 alpha2](./bootstrap/modal-4.html)
 1. [Tooltip與Popover提示訊息](https://www.youtube.com/watch?v=h8AJGequLkE)
     - [tooltips/popover](./bootstrap/tooltips.html)
+1. [collapse收合區塊](https://www.youtube.com/watch?v=-lWqpJchgf8)
+    - [collapse](./bootstrap/collapse.html)
