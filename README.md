@@ -118,3 +118,5 @@
     - [color](./bootstrap/21/color.html)
 1. [共用項目overflow](https://www.youtube.com/watch?v=OwfIFVyLcsE)
     - [overflow](./bootstrap/22/overflow.html)
+1. [共用項目border](https://www.youtube.com/watch?v=5l_GDjTS9XA)
+    - [border](./bootstrap/23/border.html)
