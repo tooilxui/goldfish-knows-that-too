@@ -103,3 +103,5 @@
     - [pagination](./bootstrap/14/pagination.html)
 1. [Display之顯示、隱藏屬性控制](https://www.youtube.com/watch?v=9s6q3_m9_LI)
     - [display control by class name](.bootstrap/15/15.html)
+1. [Flex控制太簡單](https://www.youtube.com/watch?v=X0Lpt_yX3wY)
+    - [flex](./bootstrap/16/flex.html)
